@@ -17,7 +17,8 @@ class Module extends DI.Module {
         'input': require('./lib/form/input')
       },
       'widget': {
-        'card': require('./lib/widget/card')
+        'card': require('./lib/widget/card'),
+        'spinner': require('./lib/widget/spinner')
       }
     };
 
