@@ -9,6 +9,7 @@ class Module extends DI.Module {
 
     const definition = {
       'form': {
+        'bubble': require('./lib/form/bubble'),
         'button-icon': require('./lib/form/button-icon'),
         'button-text': require('./lib/form/button-text'),
         'checkbox': require('./lib/form/checkbox'),
@@ -32,7 +33,7 @@ class Module extends DI.Module {
     });
 
     const styles = {
-      'absmax': {
+      '@scola.absmax': {
         bottom: 0,
         left: 0,
         position: 'absolute',
