@@ -9,17 +9,22 @@ class Module extends DI.Module {
 
     const definition = {
       'form': {
-        'bubble': require('./lib/form/bubble'),
-        'button-icon': require('./lib/form/button-icon'),
-        'button-text': require('./lib/form/button-text'),
-        'checkbox': require('./lib/form/checkbox'),
-        'checkbox-label': require('./lib/form/checkbox-label'),
-        'form': require('./lib/form/form'),
-        'input': require('./lib/form/input')
+        'bubble': this.instance(require('./lib/form/bubble')),
+        'button-icon': this.instance(require('./lib/form/button-icon')),
+        'button-text': this.instance(require('./lib/form/button-text')),
+        'checkbox': this.instance(require('./lib/form/checkbox')),
+        'checkbox-label': this.instance(require('./lib/form/checkbox-label')),
+        'form': this.instance(require('./lib/form/form')),
+        'input': this.instance(require('./lib/form/input'))
+      },
+      'popup': {
+        'button': this.instance(require('./lib/popup/button')),
+        'container': this.singleton(require('./lib/popup/container')),
+        'popup': this.instance(require('./lib/popup/popup'))
       },
       'widget': {
-        'card': require('./lib/widget/card'),
-        'spinner': require('./lib/widget/spinner')
+        'card': this.instance(require('./lib/widget/card')),
+        'spinner': this.instance(require('./lib/widget/spinner'))
       }
     };
 
@@ -27,8 +32,9 @@ class Module extends DI.Module {
 
     Object.keys(definition).forEach((group) => {
       Object.keys(definition[group]).forEach((name) => {
-        views['@scola.' + group + '.' + name] =
-          this.instance(definition[group][name]);
+        let key = '@scola.' + group;
+        key += group === name ? '' : '.' + name;
+        views[key] = definition[group][name];
       });
     });
 
