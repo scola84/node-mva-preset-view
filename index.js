@@ -9,7 +9,6 @@ class Module extends DI.Module {
 
     const definition = {
       'form': {
-        'bubble': this.instance(require('./lib/form/bubble')),
         'button-icon': this.instance(require('./lib/form/button-icon')),
         'button-text': this.instance(require('./lib/form/button-text')),
         'checkbox': this.instance(require('./lib/form/checkbox')),
@@ -24,7 +23,8 @@ class Module extends DI.Module {
       },
       'widget': {
         'card': this.instance(require('./lib/widget/card')),
-        'spinner': this.instance(require('./lib/widget/spinner'))
+        'spinner': this.instance(require('./lib/widget/spinner')),
+        'tooltip': this.instance(require('./lib/widget/tooltip'))
       }
     };
 
