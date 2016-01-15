@@ -1,22 +1,18 @@
 {
-  "name": "@scola/views",
+  "name": "@scola/mva-preset-view",
   "version": "1.0.0",
-  "description": "Predefined views for MVA",
+  "description": "Views for MVA",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/scola84/node-views.git"
+    "url": "git+https://github.com/scola84/node-mva-preset-view.git"
   },
-  "keywords": [
-    "views"
-  ],
   "author": "M.C. van den Boogaart <scola@kvdb.name>",
   "license": "MIT",
   "browserify": {
     "transform": [
       [
-        "babelify",
-        {
+        "babelify", {
           "presets": [
             "es2015"
           ]
