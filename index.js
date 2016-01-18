@@ -49,10 +49,10 @@ class Module extends DI.Module {
     };
 
     this.inject(MVA.View.Dispatcher)
-      .assignArgument(0, this.object(views));
+      .updateArgument(0, this.object(views));
 
     this.inject(MVA.View.Dispatcher)
-      .assignArgument(2, this.object(styles));
+      .updateArgument(2, this.object(styles));
   }
 }
 
