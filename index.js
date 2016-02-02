@@ -1,11 +1,11 @@
 'use strict';
 
 const DI = require('@scola/di');
-const MVA = require('@scola/mva');
+const View = require('@scola/view');
 
 class Module extends DI.Module {
   configure() {
-    this.addModule(MVA.Module);
+    this.addModule(View.Module);
 
     const definition = {
       'form': {
@@ -38,24 +38,12 @@ class Module extends DI.Module {
       });
     });
 
-    const styles = {
-      '@scola.absmax': {
-        bottom: 0,
-        left: 0,
-        position: 'absolute',
-        right: 0,
-        top: 0
-      }
-    };
-
-    this.inject(MVA.View.Dispatcher)
+    this.inject(View.Dispatcher)
       .updateArgument(0, this.object(views));
-
-    this.inject(MVA.View.Dispatcher)
-      .updateArgument(2, this.object(styles));
   }
 }
 
 module.exports = {
-  Module
+  Module,
+  View
 };
