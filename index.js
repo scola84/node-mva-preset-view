@@ -23,6 +23,7 @@ class Module extends DI.Module {
       },
       'widget': {
         'card': this.instance(require('./lib/widget/card')),
+        'slider': this.instance(require('./lib/widget/slider')),
         'spinner': this.instance(require('./lib/widget/spinner')),
         'tooltip': this.instance(require('./lib/widget/tooltip'))
       }
