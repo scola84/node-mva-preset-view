@@ -16,6 +16,12 @@ class Module extends DI.Module {
         'form': this.instance(require('./lib/form/form')),
         'input': this.instance(require('./lib/form/input'))
       },
+      'panel': {
+        'list-input': this.instance(require('./lib/panel/list-input')),
+        'list-item': this.instance(require('./lib/panel/list-item')),
+        'list': this.instance(require('./lib/panel/list')),
+        'panel': this.instance(require('./lib/panel/panel'))
+      },
       'popup': {
         'button': this.instance(require('./lib/popup/button')),
         'container': this.singleton(require('./lib/popup/container')),
