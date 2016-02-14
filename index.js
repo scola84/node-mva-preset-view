@@ -20,7 +20,9 @@ class Module extends DI.Module {
         'list-input': this.instance(require('./lib/panel/list-input')),
         'list-item': this.instance(require('./lib/panel/list-item')),
         'list': this.instance(require('./lib/panel/list')),
-        'panel': this.instance(require('./lib/panel/panel'))
+        'panel': this.instance(require('./lib/panel/panel')),
+        'select-item': this.instance(require('./lib/panel/select-item')),
+        'select': this.instance(require('./lib/panel/select'))
       },
       'popup': {
         'button': this.instance(require('./lib/popup/button')),
