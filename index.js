@@ -25,10 +25,10 @@ class Module extends DI.Module {
         'panel': this.instance(require('./lib/panel/panel'))
       },
       'popup': {
-        'button': this.instance(require('./lib/popup/button')),
-        'container': this.singleton(require('./lib/popup/container')),
-        'popup': this.instance(require('./lib/popup/popup')),
-        'over': this.instance(require('./lib/popup/over'))
+        'button': this.instance(require('./lib/pop/button')),
+        'container': this.singleton(require('./lib/pop/container')),
+        'popup': this.instance(require('./lib/pop/popup')),
+        'over': this.instance(require('./lib/pop/over'))
       },
       'widget': {
         'card': this.instance(require('./lib/widget/card')),
