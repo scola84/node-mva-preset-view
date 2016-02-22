@@ -27,8 +27,9 @@ class Module extends DI.Module {
       'pop': {
         'button': this.instance(require('./lib/pop/button')),
         'container': this.singleton(require('./lib/pop/container')),
-        'up': this.instance(require('./lib/pop/up')),
-        'over': this.instance(require('./lib/pop/over'))
+        'out': this.instance(require('./lib/pop/out')),
+        'over': this.instance(require('./lib/pop/over')),
+        'up': this.instance(require('./lib/pop/up'))
       },
       'widget': {
         'card': this.instance(require('./lib/widget/card')),
