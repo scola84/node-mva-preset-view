@@ -17,6 +17,7 @@ class Module extends DI.Module {
         'input': this.instance(require('./lib/form/input'))
       },
       'panel': {
+        'button': this.instance(require('./lib/panel/button')),
         'item-input': this.instance(require('./lib/panel/item-input')),
         'item-menu': this.instance(require('./lib/panel/item-menu')),
         'item-plain': this.instance(require('./lib/panel/item-plain')),
