@@ -26,6 +26,7 @@ class Module extends DI.Module {
         'panel': this.instance(require('./lib/panel/panel'))
       },
       'pop': {
+        'action': this.instance(require('./lib/pop/action')),
         'button': this.instance(require('./lib/pop/button')),
         'container': this.singleton(require('./lib/pop/container')),
         'out': this.instance(require('./lib/pop/out')),
