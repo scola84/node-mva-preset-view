@@ -33,6 +33,10 @@ class Module extends DI.Module {
         'over': this.instance(require('./lib/pop/over')),
         'up': this.instance(require('./lib/pop/up'))
       },
+      'tab': {
+        'button': this.instance(require('./lib/tab/button')),
+        'tab': this.instance(require('./lib/tab/tab'))
+      },
       'widget': {
         'card': this.instance(require('./lib/widget/card')),
         'slider': this.instance(require('./lib/widget/slider')),
