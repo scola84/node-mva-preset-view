@@ -1,6 +1,6 @@
 {
   "name": "@scola/view-preset",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "View Preset",
   "main": "index.js",
   "repository": {
@@ -12,7 +12,8 @@
   "browserify": {
     "transform": [
       [
-        "babelify", {
+        "babelify",
+        {
           "presets": [
             "es2015"
           ]
